@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #800020 0%, #2b000b 100%);
+    color: white;
+    overflow: hidden;
+}
+
+.desktop-wrapper {
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-img-first{
+    width: 80px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    margin-bottom: -20px;
+}
+
+.logo-img {
+    width: 80px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.app-name, .logo-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.tagline {
+    font-size: 0.7rem;
+    font-weight: 900;
+    opacity: 0.8;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:#d6abb5;
+}
+
+
+/* Button Styling */
+.button-wrapper {
+    animation: fadeInUp 1s ease-out;
+}
+
+.get-started-btn {
+    background-color: white;
+    color: #800020;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.get-started-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    background-color: #f8f8f8;
+    letter-spacing: 1px;
+
+}
+
+/* Registration/Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    z-index: 1;
+    text-align: center;
+}
+
+/* The Dark Form Card */
+.login-card {
+    background-color: #3d0010; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #d6abb5; 
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #520015; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border: 1px solid #800020;
+}
+
+/* White Submit Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #3d0010; 
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    background-color: #f8f8f8;
+}
+
+.arrow {
+    margin-left: 10px;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: #d6abb5;
+    font-size: 0.75rem;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+.auth-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.auth-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.auth-card {
+    background-color: #3d0010; 
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input-field {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-field label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #d6abb5; 
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-field input, .input-field select {
+    width: 100%;
+    padding: 12px;
+    background-color: #520015; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 13px;
+    background-color: white;
+    color: #3d0010; 
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover { background-color: #f0f0f0; transform: translateY(-2px); }
+
+.auth-link {
+    display: block;
+    margin-top: 20px;
+    color: #d6abb5;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.error-msg {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}

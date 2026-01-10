@@ -1,0 +1,8 @@
+# Disable directory listing
+Options -Indexes
+
+# Block all direct access to PHP files
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
