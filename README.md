@@ -94,6 +94,51 @@ http://localhost/DrQuick/
 
 ---
 
+## Screenshots
+
+### Homepage
+![Homepage](screenshots/homepage.png)
+
+### User Login
+![User Login](screenshots/user_login.png)
+
+### User Register
+![User Register](screenshots/user_register.png)
+
+### Doctor Dashboard
+![Doctor Dashboard](screenshots/doctor_dashboard.png)
+
+### Doctor Manage Schedule
+![Doctor Manage Schedule](screenshots/doctor_manage_schedule.png)
+
+### Doctor Appointement
+![Doctor Appointement](screenshots/doctor_appointement.png)
+
+### Doctor User Profile
+![Doctor User Profile](screenshots/doctor_profile.png)
+![Doctor User Profile](screenshots/doctor_profile(2).png)
+
+### Patient Dashboard
+![Patient Dashboard](screenshots/patient_dashboard.png)
+
+### Patient Book Appointement - Search Doctors
+![Patient Book Appointement](screenshots/search_doctor(1).png)
+![Patient Book Appointement](screenshots/search_doctor(2).png)
+
+### Patient Select Appointement Time
+![Patient Select Appointement Time](screenshots/doctor_schedule.png)
+
+### Patient Appointement
+![Patient Appointement](screenshots/patient_appointement.png)
+![Patient Appointement](screenshots/booking_error.png)
+
+### Patient User Profile
+![Patient User Profile](screenshots/patient_profile(1).png)
+![Patient User Profile](screenshots/patient_profile(2).png)
+![Patient User Profile](screenshots/patient_profile_update.png)
+
+---
+
 ## Future Enhancements
 
 * Email/SMS notifications for appointment confirmations
