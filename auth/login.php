@@ -34,6 +34,7 @@
                 session_regenerate_id(true);
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['role'] = $user['role'];
+                $_SESSION['fullname'] = $user['fullname'];
                 
                 if($user['role'] === 'doctor'){
                     header("Location: ../doctor/index.php");
@@ -80,7 +81,7 @@
                 <button type="submit" class="primary-btn">Login <span class="arrow">→</span></button>
             </form>
         </div>
-        <a href="../index.php" class="auth-link">New here? Create an account</a>
+        <a href="register.php" class="auth-link">New here? Create an account</a>
     </div>
 
 </body>

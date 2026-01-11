@@ -47,7 +47,7 @@
                 </div>
                 <h3>Manage Schedule</h3>
                 <p>Set your available days and time slots for patients.</p>
-                <a href="manage_schedule.php" class="btn-primary">Find a Doctor</a>
+                <a href="manage_schedule.php" class="btn-primary">Set your available</a>
             </div>
 
             <div class="action-card">

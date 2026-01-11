@@ -140,5 +140,477 @@ body {
 
 .btn-primary:hover {
     background: var(--accent-pink);
+}
+
+/* Search Bar Styling */
+.search-wrapper {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 50px;
+    gap: 15px;
+}
+
+.search-bar-container input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-icon { color: var(--accent-pink); }
+
+/* Doctor Grid */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.doctor-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover { transform: translateY(-10px); }
+
+.doc-avatar {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 2rem;
+    color: var(--accent-pink);
+}
+
+.specialty {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.doc-info {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 100px;
+    opacity: 0.5;
+}
+
+.no-results i { font-size: 3rem; margin-bottom: 15px; }
+
+/* Floating Alert System */
+.alert-box {
+    padding: 15px 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.alert-success {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.alert-error {
+    background: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Patient Table Specifics */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mini-avatar {
+    width: 32px;
+    height: 32px;
+    background: rgba(214, 171, 181, 0.2); /* accent-pink with opacity */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-pink);
+    font-size: 0.8rem;
+}
+
+/* Reusing the same Status Pill logic from Doctor side for consistency */
+.status-pill {
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pill.pending { background: rgba(255, 193, 7, 0.1); color: #ffc107; border: 1px solid rgba(255,193,7,0.2); }
+.status-pill.approved { background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46,204,113,0.2); }
+.status-pill.cancelled { background: rgba(231, 76, 60, 0.1); color: #e74c3c; border: 1px solid rgba(231,76,60,0.2); }
+
+.time-badge {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+/* Table Layout Fix */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* For mobile responsiveness */
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.custom-table th {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent-pink);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.9);
+    vertical-align: middle;
+}
+
+/* User Info Section with Avatar */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mini-avatar {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-pink);
+}
+
+/* Specific pill colors to match your Approved badge in screenshot */
+.status-pill {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-pill.approved {
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.status-pill.pending {
+    background: rgba(241, 196, 15, 0.2);
+    color: #f1c40f;
+    border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+.status-pill.cancelled {
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Center the profile card */
+.profile-card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.profile-main-card {
+    width: 100%;
+    max-width: 550px; /* Limits width so it doesn't stretch too far */
+    padding: 40px !important;
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Vertical Form Styling */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: var(--accent-pink);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Fix for the tiny white inputs */
+.styled-form input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05); /* Transparent dark background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.styled-form input:focus {
+    border-color: var(--accent-pink);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Password Row Layout */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.password-separator {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 0.1em;
+    margin: 20px 0;
+}
+
+.password-separator span {
+    background: #4a001a; /* Matches your burgundy background color */
+    padding: 0 10px;
+    font-size: 0.75rem;
+    color: var(--accent-pink);
+    text-transform: uppercase;
+}
+
+.btn-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    background: var(--accent-pink); /* Or your primary burgundy shade */
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-book:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(214, 171, 181, 0.3);
+    filter: brightness(1.1);
+}
+
+.doctor-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Schedule Grid Layout */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Individual Schedule Card */
+.schedule-card {
+    text-align: center;
+    padding: 30px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.schedule-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(214, 171, 181, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-pink);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.day-label {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.time-range {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.time-range span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: 0 5px;
+}
+
+/* Empty state styling */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.no-results i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Box */
+.modal-content {
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    padding: 40px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-icon {
+    font-size: 3rem;
+    color: var(--accent-pink);
+    margin-bottom: 20px;
+}
+
+.modal-content h2 { margin-bottom: 15px; font-size: 1.5rem; }
+.sub-text { font-size: 0.85rem; opacity: 0.7; margin-top: 10px; }
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+}
+
+@keyframes fadeIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+#bookingModal {
+    /* Critical: Hidden by default */
+    display: none; 
+    
+    /* Critical: Cover the entire screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Styling */
+    background: rgba(0, 0, 0, 0.85); /* Darken background */
+    backdrop-filter: blur(10px);    /* Blur the background */
+    z-index: 99999;                 /* Ensure it stays on top */
+    
+    /* Centering the content box */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure the content inside the modal looks right */
+.modal-content {
+    background: #4a001a; 
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
     color: white;
 }
