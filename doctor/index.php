@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DrQuick | Patient Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../doctor/assets/fontawesome-free-7.1.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../doctor/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+    </head>
 <body>
-
     <?php
     session_start();
     require '../config/db.php';
 
-    // Access control: Ensure user is logged in and is a patient
+    // Access control: Ensure user is logged in and is a doctor
     if(!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'doctor'){
         header("Location: ../auth/login.php");
         exit;
